@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".appmodule.content.ContentController">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="ContentController extends DIBaseFragment\n extends jdp.pocketlib.base.BaseFragment"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:id="@+id/btnNavigateSwipeContent"
+        android:text="GOTO SWIPEBACK CONTENT CONTROLLER"
+        android:background="#2ba1ea"
+        android:textColor="#fff"
+        style="@style/Widget.AppCompat.ButtonBar"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center|bottom"
+        tools:ignore="HardcodedText,SpUsage" />
+</FrameLayout>

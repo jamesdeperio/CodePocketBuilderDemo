@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jdp.pocketlib.widget.PocketScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".appmodule.pocketdialog.PocketDialogController">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/basic"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="BASIC DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/warning"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="WARNING DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/error"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="ERROR DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/success"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="SUCCESS DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/reward"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="REWARD DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/loader"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="LOADING DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/noInternet"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="NO INTERNET CONNECTION DIALOG"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</jdp.pocketlib.widget.PocketScrollView>

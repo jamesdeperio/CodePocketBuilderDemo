@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<FrameLayout
+    android:background="#2e97de"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/lottieMenu"
+        app:lottie_rawRes="@raw/hamburger_menu"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        />
+</FrameLayout>
+</merge>

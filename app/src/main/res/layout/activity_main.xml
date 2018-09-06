@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainFrameContainer"
+    android:orientation="vertical"
+    tools:context=".appmodule.main.MainController">
+    <include layout="@layout/view_toolbar"/>
+    <android.support.v4.widget.SlidingPaneLayout
+        android:layout_width="match_parent"
+        android:id="@+id/slidingPanelLayout"
+        android:layout_height="match_parent">
+        <include layout="@layout/view_navigation_panel"/>
+        <FrameLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="MainController extends DIBaseActivity\n extends jdp.pocketlib.base.BaseActivity\n\n(Swipe Right to Open Navigation)"
+                tools:ignore="HardcodedText,SpUsage" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainContainer"/>
+        </FrameLayout>
+    </android.support.v4.widget.SlidingPaneLayout>
+</LinearLayout>

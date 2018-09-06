@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".appmodule.pocketspinner.PocketSpinnerController">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <Button
+            android:id="@+id/btnSpinner1"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="Please Choose"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:background="#ffff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/btnSpinner2"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="match_parent"
+            android:text="Please Choose"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:background="#ffff"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_margin="15dp"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItem"
+            android:text=""
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+</FrameLayout>

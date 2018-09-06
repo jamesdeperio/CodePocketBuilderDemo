@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CodePocketBuilderDemo</string>
+    <string-array name="navigationlist">
+        <item>BaseActivity</item>
+        <item>Fragment</item>
+        <item>JSON Response</item>
+        <item>XML Response</item>
+        <item>PocketDialog</item>
+        <item>PocketSpinnerDialog</item>
+        <item>RecyclerView - Single Viewholder</item>
+        <item>RecyclerView - Multiple Viewholder</item>
+        <item>PocketViewPager</item>
+    </string-array>
+</resources>
