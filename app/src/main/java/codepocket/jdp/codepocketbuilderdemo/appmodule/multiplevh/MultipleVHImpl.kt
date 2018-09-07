@@ -55,6 +55,9 @@ class MultipleVHImpl(
                 if (it is ContentRadioButton) selectedItem+="${it.desc}\n"
                 else if (it is ContentCheckbox) selectedItem+="${it.desc}\n"
             }
-            .doOnComplete { viewMethod.showBasicDialog("SelectedItem:",selectedItem) }
+            .doOnComplete {
+                viewMethod.showBasicDialog("SelectedItem:",selectedItem)
+                selectedItem=""
+            }
             .subscribe()
 }
