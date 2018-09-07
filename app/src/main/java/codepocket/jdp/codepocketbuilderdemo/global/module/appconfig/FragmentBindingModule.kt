@@ -14,6 +14,8 @@ import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketdialog.PocketDialogC
 import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketdialog.PocketDialogModule
 import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketspinner.PocketSpinnerController
 import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketspinner.PocketSpinnerModule
+import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketvp.PocketVPController
+import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketvp.PocketVPModule
 import codepocket.jdp.codepocketbuilderdemo.appmodule.singlevh.SingleVHController
 import codepocket.jdp.codepocketbuilderdemo.appmodule.singlevh.SingleVHModule
 import codepocket.jdp.codepocketbuilderdemo.appmodule.swipecontent.SwipeContentController
@@ -58,5 +60,9 @@ abstract class FragmentBindingModule {
     @FragmentScope
     @ContributesAndroidInjector(modules = [MultipleVHModule::class])
     internal abstract fun multipleVHInjector(): MultipleVHController
+
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [PocketVPModule::class])
+    internal abstract fun pocketVPInjector(): PocketVPController
 
 }

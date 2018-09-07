@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".appmodule.pocketvp.PocketVPController">
+
+    <jdp.pocketlib.widget.PocketTabLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tabLayout"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabBackground="@color/colorPrimary"
+        app:tabSelectedTextColor="#00abf4"
+        app:tabMode="scrollable"
+        app:tabTextColor="#000"
+        android:layout_height="wrap_content" />
+
+    <jdp.pocketlib.widget.PocketViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/viewPager"
+        android:layout_height="match_parent" />
+</LinearLayout>

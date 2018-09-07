@@ -18,7 +18,7 @@ class SwipeContentController : DIBaseSwipeFragment(), HasSwipeContentContract.Ev
     @field:[Inject] internal lateinit var subscription: CompositeDisposable
     @field:[Inject] internal lateinit var eventBus: EventBus<PublishSubject<Any>>
 
-    override fun onLoadEvent(savedInstanceState: Bundle?) {
+    override fun initialization(savedInstanceState: Bundle?) {
         eventBus.sendEvent(SlidingPanelConfig(task = "DISABLE"))
     }
 

@@ -11,6 +11,7 @@ import codepocket.jdp.codepocketbuilderdemo.appmodule.jsonresponse.JSONResponseC
 import codepocket.jdp.codepocketbuilderdemo.appmodule.multiplevh.MultipleVHController
 import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketdialog.PocketDialogController
 import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketspinner.PocketSpinnerController
+import codepocket.jdp.codepocketbuilderdemo.appmodule.pocketvp.PocketVPController
 import codepocket.jdp.codepocketbuilderdemo.appmodule.singlevh.SingleVHController
 import codepocket.jdp.codepocketbuilderdemo.appmodule.xmlresponse.XMLResponseController
 import codepocket.jdp.codepocketbuilderdemo.global.base.DIBaseActivity
@@ -65,7 +66,7 @@ class MainController : DIBaseActivity(), HasMainContract.Event {
             "PocketSpinnerDialog"->viewMethod.gotoFragment(PocketSpinnerController())
             "RecyclerView - Single Viewholder"->viewMethod.gotoFragment(SingleVHController())
             "RecyclerView - Multiple Viewholder"->viewMethod.gotoFragment(MultipleVHController())
-            "PocketViewPager"->{}
+            "PocketViewPager"->viewMethod.gotoFragment(PocketVPController())
         }
     }
 
