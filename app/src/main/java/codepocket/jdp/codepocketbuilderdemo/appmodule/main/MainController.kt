@@ -17,26 +17,25 @@ import codepocket.jdp.codepocketbuilderdemo.appmodule.xmlresponse.XMLResponseCon
 import codepocket.jdp.codepocketbuilderdemo.global.base.DIBaseActivity
 import codepocket.jdp.codepocketbuilderdemo.global.model.event.SlidingPanelConfig
 import codepocket.jdp.codepocketbuilderdemo.global.model.temp.Menu
-import codepocket.jdp.codepocketbuilderdemo.integration.bus.EventBus
+import codepocket.jdp.codepocketbuilderdemo.global.util.ChannelID
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.functions.Consumer
-import io.reactivex.subjects.PublishSubject
+import jdp.pocketlib.util.EventPublisher
 import javax.inject.Inject
 
 class MainController : DIBaseActivity(), HasMainContract.Event {
     @field:[Inject] internal lateinit var presenter: HasMainContract.Presenter
     @field:[Inject] internal lateinit var viewMethod: HasMainContract.ViewMethod
     @field:[Inject] internal lateinit var subscription: CompositeDisposable
-    @field:[Inject] internal lateinit var eventBus: EventBus<PublishSubject<Any>>
+    @field:[Inject] internal lateinit var eventPublisher: EventPublisher
 
-    override fun onBusReceivedEvent(): Consumer<in Any> = Consumer {
+    override fun onBusReceivedEvent(): (Any) -> Unit =  {
         if (it is SlidingPanelConfig && it.task=="DISABLE")
             viewMethod.disableSlidingPanel()
         else if (it is SlidingPanelConfig && it.task=="ENABLE")
             viewMethod.enableSlidingPanel()
     }
     override fun initialization(savedInstanceState: Bundle?) {
-        eventBus.subscribeReceiver(onBusReceivedEvent())
+        eventPublisher.subscribeReceiver(ChannelID.MENU,onBusReceivedEvent())
     }
     override fun onLoadEvent(savedInstanceState: Bundle?) {
         subscription.add(presenter.loadNavigationOption())
@@ -45,7 +44,7 @@ class MainController : DIBaseActivity(), HasMainContract.Event {
     override fun onDestroy() {
         super.onDestroy()
         subscription.dispose()
-        eventBus.unSubscribeReceiver()
+        eventPublisher.disposeAllChannel()
     }
 
     override fun onMenuClickEvent(menuTask: Menu) {

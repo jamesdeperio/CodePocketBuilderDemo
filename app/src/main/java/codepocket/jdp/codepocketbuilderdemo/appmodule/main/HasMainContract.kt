@@ -10,7 +10,6 @@ import android.view.View
 import codepocket.jdp.codepocketbuilderdemo.global.model.obj.Navigation
 import codepocket.jdp.codepocketbuilderdemo.global.model.temp.Menu
 import io.reactivex.disposables.Disposable
-import io.reactivex.functions.Consumer
 import kotlinx.coroutines.experimental.Job
 
 interface HasMainContract {
@@ -19,7 +18,7 @@ interface HasMainContract {
         fun onMenuClickEvent(menuTask: Menu)
         override fun onPanelClosed(panel: View) {}
         override fun onPanelOpened(panel: View) {}
-        fun onBusReceivedEvent(): Consumer<in Any>
+        fun onBusReceivedEvent(): (Any) -> Unit
     }
 
     interface ViewMethod {

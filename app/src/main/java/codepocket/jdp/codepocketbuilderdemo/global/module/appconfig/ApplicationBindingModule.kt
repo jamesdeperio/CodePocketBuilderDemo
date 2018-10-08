@@ -7,12 +7,13 @@ package codepocket.jdp.codepocketbuilderdemo.global.module.appconfig
 import android.app.Application
 import android.content.Context
 import codepocket.jdp.codepocketbuilderdemo.global.scope.ApplicationScope
-import codepocket.jdp.codepocketbuilderdemo.integration.bus.EventBus
 import codepocket.jdp.codepocketbuilderdemo.integration.network.NetworkManager
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import io.reactivex.subjects.PublishSubject
+import jdp.pocketlib.util.Bus
+import jdp.pocketlib.util.EventPublisher
 
 @Module
 abstract class ApplicationBindingModule {
@@ -23,7 +24,7 @@ abstract class ApplicationBindingModule {
         @ApplicationScope
         @Provides
         @JvmStatic
-        fun provideEventBus(): EventBus<PublishSubject<Any>> = EventBus(bus = PublishSubject.create())
+        fun provideEventPublisher(): EventPublisher = EventPublisher(bus = Bus.PublishSubject)
 
         @ApplicationScope
         @Provides
